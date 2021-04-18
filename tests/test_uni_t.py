@@ -2,7 +2,7 @@ from context import uni_t
 import time
 import timeit
 
-dmm = uni_t.DMMMonitor('volts', interface='usb0')
+dmm = uni_t.DMMMonitor('volts', interface='usb1')
 
 dmm.start()
 
