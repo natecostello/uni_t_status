@@ -3,8 +3,6 @@ import os
 from threading import Thread
 import time
 
-#sigrok_cmd = 'sigrok-cli --driver=uni-t-ut61e-ser:conn=/dev/ttyUSB0 --samples 1'
-
 class DMMMonitor:
     
     def __init__(self, units, interface='usb1'):
@@ -20,7 +18,7 @@ class DMMMonitor:
             output = subprocess.run(self.sigrok_cmd, shell=True,
                                     check=True, capture_output=True, text=True)
             value_string = output.stdout
-            self.value = float(value_string.split(' ')[1])
+            self.value = round(float(value_string.split(' ')[1]),3)
 
     def start(self):
         rx = Thread(target = self.dmm_rx_task)
