@@ -1,5 +1,3 @@
-26 lines (24 sloc)  901 Bytes
-  
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -22,7 +20,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    py_modules = ['uni_t.py']
+    py_modules=['uni_t.py'],
     #package_dir={"": "src"},
     #packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
