@@ -21,7 +21,5 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     py_modules=['uni_t'],
-    #package_dir={"": "src"},
-    #packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
 )
