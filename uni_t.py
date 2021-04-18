@@ -7,7 +7,7 @@ import time
 
 class DMMMonitor:
     
-    def __init__(self, units, interface='usb0'):
+    def __init__(self, units, interface='usb1'):
         self.usbInterface = interface.upper()
         self.sigrok_dir = os.popen('which sigrok-cli').readline()[:-1]
         self.sigrok_cmd = f'sigrok-cli --driver=uni-t-ut61e-ser:conn=/dev/tty{self.usbInterface} --samples 1'
