@@ -5,13 +5,14 @@ import time
 
 class DMMMonitor:
     
-    def __init__(self, units, interface='/dev/ttyUSBut61e'):
+    def __init__(self, units, interface):
         self.usbInterface = interface
         self.sigrok_dir = os.popen('which sigrok-cli').readline()[:-1]
         self.sigrok_cmd = f'sigrok-cli --driver=uni-t-ut61e-ser:conn={self.usbInterface} --samples 1'
         self.units = units
         self.value = 0
         self.output = ''
+        self.isValid = False
 
     def dmm_rx_task(self):
         while True:
@@ -19,6 +20,7 @@ class DMMMonitor:
                                     check=True, capture_output=True, text=True)
             value_string = output.stdout
             self.value = round(float(value_string.split(' ')[1]),3)
+            self.isValid = True
 
     def start(self):
         rx = Thread(target = self.dmm_rx_task)
