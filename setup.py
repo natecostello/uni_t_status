@@ -22,5 +22,7 @@ setuptools.setup(
     ],
     py_modules=['uni_t'],
     python_requires=">=3.6",
-    install_requires=["instrument_logger-NSC @ git+https://github.com/natecostello/instrument_logger.git"]
+    install_requires=[
+        "instrument_logger-NSC @ git+https://github.com/natecostello/instrument_logger.git",
+        "ut61e-DM @ git+https://github.com/natecostello/ut61e_py.git"]
 )
