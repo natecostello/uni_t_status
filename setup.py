@@ -22,4 +22,5 @@ setuptools.setup(
     ],
     py_modules=['uni_t'],
     python_requires=">=3.6",
+    install_requires=["instrument_logger-NSC @ git+https://github.com/natecostello/instrument_logger.git"]
 )
