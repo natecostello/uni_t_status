@@ -2,9 +2,9 @@
 
 # uni_t
 
-This is a package to collect data from a UNI-T UT61E DMM using sigrok.
+This is a package to collect data from a UNI-T UT61E DMM.
 
-
+Based on some testing, the fastest the DMM will respond or update a parameter is 0.4 seconds.  Based on this, the code will poll the DMM every 0.4 seconds with a dedicated thread and cache the value.  Reading values from the insturment will be instantaneous, but could represent a value that is about 0.4 seconds old.
 
 This is an expirement in packaging following [this guide](https://packaging.python.org/tutorials/packaging-projects/), as modified by [this guide](https://docs.python-guide.org/writing/structure/), and some help from section 2.2 of the [setup script documentation](https://docs.python.org/3/distutils/setupscript.html).
 
