@@ -1,3 +1,5 @@
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/natecostello/uni_t_status)
+
 # uni_t
 
 This is a package to collect data from a UNI-T UT61E DMM using sigrok.
